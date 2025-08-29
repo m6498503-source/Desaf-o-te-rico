@@ -29,3 +29,28 @@ Configurar un **repositorio espejo (mirror local)** de los repositorios oficiale
 sudo apt update
 sudo apt install apt-mirror -y
 ```
+### 2. Configuramos el mirror 
+```bash
+sudo nano /etc/apt/mirror.list
+```
+### 3. Descargar los paquetes del mirror 
+```bash
+sudo apt-mirror
+```
+### 4. Configuramos un servidor web donde exponemos el mirror 
+```bash
+sudo apt install apache2 -y
+sudo ln -s /var/spool/apt-mirror/mirror/archive.ubuntu.com/ubuntu /var/www/html/ubuntu
+```
+### 5. Configuramos los clientes
+Editamos /etc/apt/sources.list en cada cliente
+```bash
+deb http://<IP_DEL_SERVIDOR>/ubuntu focal main restricted universe multiverse
+deb http://<IP_DEL_SERVIDOR>/ubuntu focal-updates main restricted universe multiverse
+deb http://<IP_DEL_SERVIDOR>/ubuntu focal-security main restricted universe multiverse
+```
+### 6. actualizamos los indices
+```bash
+sudo apt update
+```
+
