@@ -19,4 +19,5 @@ A traves de esta documentacion, se presenta un plan de accion integral en el que
 - Estandarizar la **gestión de software** para reducir errores y optimizar recursos.  
 - Mejorar la **colaboración y conectividad** en los entornos de desarrollo.  
 - Fortalecer la **seguridad** de la infraestructura frente a accesos no autorizados.
+  
 Cada seccion de este repositorio corresponde a una de estas problematicas
